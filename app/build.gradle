@@ -15,6 +15,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -42,9 +43,16 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.2.2'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.preference:preference:1.1.1'
+    implementation 'com.google.firebase:firebase-firestore:21.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.google.android.material:material:1.2.0-alpha04'
     implementation 'com.google.firebase:firebase-analytics'
+    'com.android.support:design:24.1.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation "com.google.firebase:firebase-database:19.2.1"
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
 }

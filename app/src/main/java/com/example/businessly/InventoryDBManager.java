@@ -1,3 +1,4 @@
+/*
 package com.example.businessly;
 
 import android.content.ContentValues;
@@ -63,3 +64,4 @@ public class InventoryDBManager {
 
 }
 
+*/
