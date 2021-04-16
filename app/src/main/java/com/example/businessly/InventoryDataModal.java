@@ -6,7 +6,7 @@ public class InventoryDataModal
     private String item;
     private int price;
     private int quantity;
-
+    private int quantity2;      //qty selected by the customer
     public InventoryDataModal() {
         // empty constructor required for firebase.
 
@@ -38,4 +38,7 @@ public class InventoryDataModal
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public int getQuantity2(){return quantity2;}
+    public void setQuantity2(int quantity2){this.quantity2=quantity2;}
 }

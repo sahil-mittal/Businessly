@@ -1,4 +1,72 @@
-package com.example.businessly.ui.inventory;
+/*package com.example.businessly;
+
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link CustomerListViewFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+/*
+public class CustomerListViewFragment extends Fragment {
+
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+
+    public CustomerListViewFragment() {
+        // Required empty public constructor
+    }
+
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment CustomerListViewFragment.
+     */
+/*
+    // TODO: Rename and change types and number of parameters
+    public static CustomerListViewFragment newInstance(String param1, String param2) {
+        CustomerListViewFragment fragment = new CustomerListViewFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_customer_list_view, container, false);
+    }
+}
+*/
+
+package com.example.businessly;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -36,40 +104,42 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InventoryFragment extends Fragment {
+public class CustomerListViewFragment extends Fragment {
 
     // creating a variable for our list view,
     // arraylist and firebase Firestore.
-    ListView inventoryLV;
-    InventoryLVAdapter inventoryLVAdapter;
+    ListView inventoryLV;/***/
+    CustomerLVAdapter customerLVAdapter;
     ArrayList<InventoryDataModal> inventoryDataArrayList;
     DatabaseReference db;
     InventoryDataModal inventoryDataModal;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
         // Inflate the layout for this fragment
         inventoryDataArrayList = new ArrayList<InventoryDataModal>();
 
-        View rootView =  inflater.inflate(R.layout.fragment_inventory, container, false);
-        inventoryLV = rootView.findViewById(R.id.idLVInventory);
+        View rootView =  inflater.inflate(R.layout.fragment_customer_list_view, container, false);
+        inventoryLV = rootView.findViewById(R.id.idLVCustomers);
         db = FirebaseDatabase.getInstance().getReference();
-        FloatingActionButton addItemButton = rootView.findViewById(R.id.addInventoryBtn);
+        FloatingActionButton addToCartButton = rootView.findViewById(R.id.btnProceed);//
 
-        inventoryLVAdapter = new InventoryLVAdapter(getActivity(), inventoryDataArrayList);
+        customerLVAdapter = new CustomerLVAdapter(getActivity(), inventoryDataArrayList);
 
         if (savedInstanceState == null) {
             loadDataInListView();
         }
 
-        inventoryLV.setAdapter(inventoryLVAdapter);
-
-        addItemButton.setOnClickListener(new View.OnClickListener() {
+        inventoryLV.setAdapter(customerLVAdapter);
+//
+        addToCartButton.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view) {
                 if (isNetworkAvailable()){
-                    Intent searchIntent = new Intent(getActivity(), AddInventoryItemActivity.class);
+                    Intent searchIntent = new Intent(getActivity(), CustomerLVAdapter.class);
                     startActivity(searchIntent);
                 }
                 else {
@@ -78,7 +148,7 @@ public class InventoryFragment extends Fragment {
             }
 
         });
-
+//
         return rootView;
     }
 
@@ -102,7 +172,7 @@ public class InventoryFragment extends Fragment {
                 for(DataSnapshot inventorySnapshot : dataSnapshot.getChildren()){
                     inventoryDataArrayList.add(inventorySnapshot.getValue(InventoryDataModal.class));
                 }
-                inventoryLVAdapter.notifyDataSetChanged();
+                customerLVAdapter.notifyDataSetChanged();
             }
 
         });

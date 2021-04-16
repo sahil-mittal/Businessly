@@ -39,6 +39,7 @@ public class ShopLogin extends AppCompatActivity
         {
             Intent intent=new Intent(ShopLogin.this,ShopDashBoard.class);
             startActivity(intent);
+            finish();
         }
         else
         {

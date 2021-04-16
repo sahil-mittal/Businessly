@@ -18,7 +18,7 @@
         <!--Text view for displaying our text -->
 
         <TextView
-            android:id="@+id/txtItem"
+            android:id="@+id/txtItem1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -27,7 +27,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/txtPrice"
+            android:id="@+id/txtPrice1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -35,22 +35,19 @@
             android:text="Price"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/txtQty"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/EdittxtQty1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Quantity"
-            android:text="Quantity"
-            android:textSize="20sp" />
+            android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/btnUpdate"
-            android:layout_width="wrap_content"
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:clickable="true"
-            android:text="Update" />
+            android:text="CheckBox" />
 
     </LinearLayout>
 

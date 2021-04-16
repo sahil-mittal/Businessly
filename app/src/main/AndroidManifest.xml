@@ -13,10 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Businessly">
+        <activity android:name=".OrdersLVAdapter"></activity>
+        <activity android:name=".CustomerDashBoardActivity" />
+        <activity android:name=".CustomerSignInActivity" />
+        <activity android:name=".CustomerLoginActivity" />
         <activity
             android:name=".AddInventoryItemActivity"
             android:label="@string/title_activity_add_inventory_item"
-            android:theme="@style/Theme.Businessly.NoActionBar"></activity>
+            android:theme="@style/Theme.Businessly.NoActionBar" />
         <activity
             android:name=".ShopDashBoard"
             android:label="@string/title_activity_shop_dash_board" />

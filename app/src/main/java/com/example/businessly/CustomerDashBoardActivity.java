@@ -1,0 +1,27 @@
+package com.example.businessly;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class CustomerDashBoardActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_customer_dash_board);
+
+        if(savedInstanceState==null)
+        {
+            Bundle args = new Bundle();
+//            if (getIntent().getParcelableExtra("MOVIE")== null)
+//                Log.v("not ok", "intent is null");
+//            else
+//                Log.v("ok", "intent is not null");
+            // args.putParcelable(SearchFragment.MOVIE_DETAIL,(getIntent().getParcelableExtra("MOVIE")));
+            CustomerListViewFragment fragment = new CustomerListViewFragment();
+            fragment.setArguments(args);
+            getSupportFragmentManager().beginTransaction().replace(R.id.dashboard_customer, fragment).commit();
+        }
+    }
+}

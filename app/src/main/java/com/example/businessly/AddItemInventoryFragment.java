@@ -69,7 +69,8 @@ public class AddItemInventoryFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
         // Inflate the layout for this fragment
         Bundle args = getArguments();
         View rootView = inflater.inflate(R.layout.fragment_add_item_inventory, container, false);

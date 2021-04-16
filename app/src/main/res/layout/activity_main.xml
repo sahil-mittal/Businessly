@@ -11,8 +11,7 @@
         android:layout_width="180dp"
         android:layout_height="48dp"
         android:layout_marginTop="68dp"
-        android:onClick="customerLogin"
-        android:text="Customer Login"
+        android:text="Customer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,10 +19,9 @@
 
     <Button
         android:id="@+id/shop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="shopLogin"
-        android:text="Shopkeeper Login"
+        android:layout_width="181dp"
+        android:layout_height="46dp"
+        android:text="Shopkeeper"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -35,18 +33,18 @@
         android:id="@+id/imageView"
         android:layout_width="208dp"
         android:layout_height="249dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="108dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pic" />
+        app:srcCompat="@drawable/logo2" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Welcome"
         android:textColor="#9C27B0"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -55,6 +53,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
+        app:layout_constraintVertical_bias="0.6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
