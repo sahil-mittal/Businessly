@@ -36,7 +36,8 @@ public class CustomerSignInActivity extends AppCompatActivity
         mPass = findViewById(R.id.passsignin);
         signInBtn = findViewById(R.id.singin_btn);
         mTextView = findViewById(R.id.textNot);
-
+        mEmail.setText("sahilm0704@gmail.com");
+        mPass.setText("mittal");
         mAuth = FirebaseAuth.getInstance();
         mTextView.setOnClickListener(new View.OnClickListener() {
             @Override

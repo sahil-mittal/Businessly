@@ -13,19 +13,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editTextOrders"
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine" />
+            android:text="TextView" />
 
-        <CheckBox
-            android:id="@+id/checkBoxCnfm"
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Confirm" />
+            android:text="TextView" />
 
     </LinearLayout>
 

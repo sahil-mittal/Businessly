@@ -85,6 +85,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.businessly.AddInventoryItemActivity;
+import com.example.businessly.OrdersDataModal;
+import com.example.businessly.OrdersLVAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.example.businessly.InventoryLVAdapter;
@@ -124,9 +126,9 @@ public class NotificationsFragment extends Fragment {
         View rootView =  inflater.inflate(R.layout.fragment_notifications, container, false);
         ordersLV = rootView.findViewById(R.id.idLVOrders);
         db = FirebaseDatabase.getInstance().getReference();
-        FloatingActionButton addToCartButton = rootView.findViewById(R.id.btnProceed);//
+        //FloatingActionButton addToCartButton = rootView.findViewById(R.id.btnProceed);//
 
-        ordersLV = new OrdersLVAdapter(getActivity(), ordersDataArrayList);
+        //ordersLV = new OrdersLVAdapter(getActivity(), ordersDataArrayList);
 
         if (savedInstanceState == null) {
             loadDataInListView();
@@ -134,7 +136,7 @@ public class NotificationsFragment extends Fragment {
 
         ordersLV.setAdapter(ordersLVAdapter);
 //
-        addToCartButton.setOnClickListener(new View.OnClickListener()
+       /* addToCartButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view) {
@@ -147,7 +149,7 @@ public class NotificationsFragment extends Fragment {
                 }
             }
 
-        });
+        });*/
 //
         return rootView;
     }

@@ -78,6 +78,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -111,8 +112,11 @@ public class CustomerListViewFragment extends Fragment {
     ListView inventoryLV;/***/
     CustomerLVAdapter customerLVAdapter;
     ArrayList<InventoryDataModal> inventoryDataArrayList;
+    ArrayList<CustomerOrderModal> customerOderArrayList;
+
     DatabaseReference db;
     InventoryDataModal inventoryDataModal;
+    CustomerOrderModal customerOrderModal;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -134,13 +138,35 @@ public class CustomerListViewFragment extends Fragment {
 
         inventoryLV.setAdapter(customerLVAdapter);
 //
+
         addToCartButton.setOnClickListener(new View.OnClickListener()
         {
+
             @Override
             public void onClick(View view) {
+                customerOderArrayList=new ArrayList<CustomerOrderModal>();
+
+
                 if (isNetworkAvailable()){
-                    Intent searchIntent = new Intent(getActivity(), CustomerLVAdapter.class);
-                    startActivity(searchIntent);
+//                    Intent searchIntent = new Intent(getActivity(), CustomerLVAdapter.class);
+//                    startActivity(searchIntent);
+                    for(int i=0;i<inventoryDataArrayList.size();i++)
+                    {
+                        TextView itemName,price;
+                        EditText quantity2;
+                        itemName=(TextView) view.findViewById(R.id.txtItem1);
+                        price=(TextView) view.findViewById(R.id.txtPrice1);
+//                        quantity2=(EditText) view.findViewById(R.id.EdittxtQty1);
+//                        if(quantity2!=null && quantity2.getText()!=null && Integer.parseInt(quantity2.getText().toString())>0)
+//                        {
+//                            CustomerOrderModal customerOrderModal=new CustomerOrderModal();
+//                            customerOrderModal.setItem(itemName.getText().toString());
+//                            customerOrderModal.setPrice(Integer.parseInt(price.getText().toString()));
+//                            customerOrderModal.setQuantity2(Integer.parseInt(quantity2.getText().toString()));
+//                            customerOderArrayList.add(customerOrderModal);
+//                            System.out.println(customerOrderModal);
+//                        }
+                    }
                 }
                 else {
                     Toast.makeText(getContext(), "No Connection!\nCheck your Internet Connection", Toast.LENGTH_LONG).show();
@@ -185,5 +211,24 @@ public class CustomerListViewFragment extends Fragment {
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
+    /*private void saveDataToDB()
+    {
+        db.child("OrdersDB").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for(DataSnapshot customerSnapshot : snapshot.getChildren())
+                {
+                    //customerOderArrayList.add(snapshot.)
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }*/
 
 }
