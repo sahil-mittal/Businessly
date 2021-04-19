@@ -1,6 +1,9 @@
 # Businessly
 This is an android application to ease the lives of the Retailers and the Customers durning the pandemic.
 It is a eCommerce platform built to uplift the local businesses.  
+Before running the Shopkeeper login please remeber the default login and password.
+ID- Admin
+Password- admin
 Please note this app is under development so there are many redundant files in the repository. Please ignore them.
 The code has been written in Java language. 
 
