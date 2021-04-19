@@ -1,7 +1,7 @@
 # Businessly
 This is an android application to ease the lives of the Retailers and the Customers durning the pandemic.
 It is a eCommerce platform built to uplift the local businesses.  
-
+Please note this app is under development so there are many redundant files in the repository. Please ignore them.
 The code has been written in Java language. 
 
 ## Video Link
