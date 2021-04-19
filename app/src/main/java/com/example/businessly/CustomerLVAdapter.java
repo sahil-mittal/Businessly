@@ -29,14 +29,14 @@ public class CustomerLVAdapter extends ArrayAdapter<InventoryDataModal> {
     private Context context;
     private List<InventoryDataModal> list;
     private EditText qty2;
-    ArrayList<CustomerOrderModal> customerOderArrayList;
+    ArrayList<String> customerOderArrayList;
 
     public CustomerLVAdapter(@NonNull Context context, ArrayList<InventoryDataModal> InventoryDataModalArrayList)
     {
         super(context, 0, InventoryDataModalArrayList);
         this.context = context;
         list = InventoryDataModalArrayList;
-        customerOderArrayList=new ArrayList<CustomerOrderModal>();
+        customerOderArrayList=new ArrayList<String>();
         notifyDataSetChanged();
     }
 
@@ -92,12 +92,7 @@ public class CustomerLVAdapter extends ArrayAdapter<InventoryDataModal> {
                 /*AppCompatActivity activity = (AppCompatActivity) v.getContext();
                 Fragment myFragment = new Fragment();
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.idaddTocart, myFragment).addToBackStack(null).commit();*/
-                //if(!quantity.equals("") && Integer.parseInt(quantity)>0)
-                CustomerOrderModal customerOrderModal=new CustomerOrderModal();
-                customerOrderModal.setItem(dataModal.getItem());
-                customerOrderModal.setPrice(dataModal.getPrice());
-                customerOrderModal.setQuantity2(1);
-                customerOderArrayList.add(customerOrderModal);
+                customerOderArrayList.add(dataModal.getItem());
 
                 Toast.makeText(getContext(), "No. of Items in cart: " + customerOderArrayList.size(), Toast.LENGTH_SHORT).show();
             }
@@ -105,6 +100,10 @@ public class CustomerLVAdapter extends ArrayAdapter<InventoryDataModal> {
         });
 
         return listitemView;
+    }
+
+    public ArrayList<String> getCustomerOderArrayList() {
+        return customerOderArrayList;
     }
     //CheckBox ch=(CheckBox)findViewById(R.id.checkBox);
     /*public boolean onCheckboxClicked(View view) {

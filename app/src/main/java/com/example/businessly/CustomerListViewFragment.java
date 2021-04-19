@@ -87,6 +87,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.businessly.AddInventoryItemActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.example.businessly.InventoryLVAdapter;
 import com.example.businessly.InventoryDataModal;
@@ -112,16 +114,19 @@ public class CustomerListViewFragment extends Fragment {
     ListView inventoryLV;/***/
     CustomerLVAdapter customerLVAdapter;
     ArrayList<InventoryDataModal> inventoryDataArrayList;
-    ArrayList<CustomerOrderModal> customerOderArrayList;
+    ArrayList<String> customerOderArrayList;
 
     DatabaseReference db;
     InventoryDataModal inventoryDataModal;
-    CustomerOrderModal customerOrderModal;
+    public FirebaseAuth auth;
+    public FirebaseUser currentUser;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
+        auth = FirebaseAuth.getInstance();
+        currentUser = auth.getCurrentUser();
         // Inflate the layout for this fragment
         inventoryDataArrayList = new ArrayList<InventoryDataModal>();
 
@@ -144,29 +149,18 @@ public class CustomerListViewFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                customerOderArrayList=new ArrayList<CustomerOrderModal>();
-
+                customerOderArrayList=customerLVAdapter.getCustomerOderArrayList();
 
                 if (isNetworkAvailable()){
-//                    Intent searchIntent = new Intent(getActivity(), CustomerLVAdapter.class);
-//                    startActivity(searchIntent);
-                    for(int i=0;i<inventoryDataArrayList.size();i++)
-                    {
-                        TextView itemName,price;
-                        EditText quantity2;
-                        itemName=(TextView) view.findViewById(R.id.txtItem1);
-                        price=(TextView) view.findViewById(R.id.txtPrice1);
-//                        quantity2=(EditText) view.findViewById(R.id.EdittxtQty1);
-//                        if(quantity2!=null && quantity2.getText()!=null && Integer.parseInt(quantity2.getText().toString())>0)
-//                        {
-//                            CustomerOrderModal customerOrderModal=new CustomerOrderModal();
-//                            customerOrderModal.setItem(itemName.getText().toString());
-//                            customerOrderModal.setPrice(Integer.parseInt(price.getText().toString()));
-//                            customerOrderModal.setQuantity2(Integer.parseInt(quantity2.getText().toString()));
-//                            customerOderArrayList.add(customerOrderModal);
-//                            System.out.println(customerOrderModal);
-//                        }
-                    }
+
+                    CartModal cartModal = new CartModal();
+                    cartModal.setCemail(currentUser.getEmail());
+                    cartModal.setItems(customerOderArrayList);
+                    db.child("Orders").push().setValue(cartModal);
+//                    Intent cartIntent = new Intent(getActivity(), CartActivity.class);
+//                    startActivity(cartIntent);
+                    Toast.makeText(getContext(), "Order placed successfully\nWill be delivered asap...", Toast.LENGTH_LONG).show();
+
                 }
                 else {
                     Toast.makeText(getContext(), "No Connection!\nCheck your Internet Connection", Toast.LENGTH_LONG).show();

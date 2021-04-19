@@ -47,9 +47,8 @@
         android:id="@+id/singin_btn"
         android:layout_width="113dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginTop="32dp"
         android:text="SignIN"
-        app:layout_constraintBottom_toTopOf="@+id/textNot"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passsignin" />
@@ -58,13 +57,14 @@
         android:id="@+id/textNot"
         android:layout_width="254dp"
         android:layout_height="30dp"
-        android:layout_marginBottom="92dp"
         android:text="    Not Registered? SignUp! "
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/singin_btn"
+        app:layout_constraintVertical_bias="0.243" />
 
     <EditText
         android:id="@+id/email_signin"

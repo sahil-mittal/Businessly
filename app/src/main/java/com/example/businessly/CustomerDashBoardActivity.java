@@ -29,7 +29,7 @@ public class CustomerDashBoardActivity extends AppCompatActivity implements AddT
     }
 
     @Override
-    public void onAddToCart(ArrayList<CustomerOrderModal> addedItems) {
+    public void onAddToCart(ArrayList<String> addedItems) {
         Intent intent = new Intent(this, CartActivity.class);
         intent.putExtra("CART", addedItems);
         startActivity(intent);
