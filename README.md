@@ -26,6 +26,7 @@ https://drive.google.com/file/d/1Y8cVKStkBZJIe2zefDlV8UZbE1hjh47G/view?usp=shari
 
 ## ScreenShots
 
+<img src= "https://github.com/sahil-mittal/Businessly/blob/518c095064acdef6d88aca60c17564a440927c03/app/src/main/res/drawable/1.jpeg" width="270" height="400"/>
 
 ![alt text](https://github.com/sahil-mittal/Businessly/blob/518c095064acdef6d88aca60c17564a440927c03/app/src/main/res/drawable/1.jpeg "Welcome")           ![alt text](Screen Shots/2.jpeg "Shopkeeper Login")
 ![alt text](Screen Shots/3.jpeg "Home Fragment")     ![alt text](Screen Shots/4.jpeg "Inventory Fragment")
