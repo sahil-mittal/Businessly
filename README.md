@@ -27,13 +27,15 @@ https://drive.google.com/file/d/1Y8cVKStkBZJIe2zefDlV8UZbE1hjh47G/view?usp=shari
 ## ScreenShots
 
 <img src= "https://github.com/sahil-mittal/Businessly/blob/518c095064acdef6d88aca60c17564a440927c03/app/src/main/res/drawable/1.jpeg" width="270" height="400"/>
-
-![alt text](https://github.com/sahil-mittal/Businessly/blob/518c095064acdef6d88aca60c17564a440927c03/app/src/main/res/drawable/1.jpeg "Welcome")           ![alt text](Screen Shots/2.jpeg "Shopkeeper Login")
-![alt text](Screen Shots/3.jpeg "Home Fragment")     ![alt text](Screen Shots/4.jpeg "Inventory Fragment")
-![alt text](Screen Shots/5.jpeg "Add Item")           ![alt text](Screen Shots/6.png "RealTime DataBase")
-![alt text](Screen Shots/7.jpeg "Customer SignIN")    ![alt text](Screen Shots/8.jpeg "Customer SignUp")
-![alt text](Screen Shots/9.png "Authentication")    ![alt text](Screen Shots/10.jpeg "Item View")
-![alt text](Screen Shots/11.jpeg "Order Placed")    ![alt text](Screen Shots/12.jpeg "Order pushed to Realtime DataBase")
-
-
+<img src= "https://github.com/sahil-mittal/Businessly/blob/85dcece84129a906ce61a673a4b641f9f4f97d80/app/src/main/res/drawable/2.jpeg" width="270" height="400"/>
+<img src= "https://github.com/sahil-mittal/Businessly/blob/85dcece84129a906ce61a673a4b641f9f4f97d80/app/src/main/res/drawable/3.jpeg" width="270" height="400"/>
+<img src= "https://github.com/sahil-mittal/Businessly/blob/85dcece84129a906ce61a673a4b641f9f4f97d80/app/src/main/res/drawable/4.jpeg" width="270" height="400"/>
+<img src= "https://github.com/sahil-mittal/Businessly/blob/85dcece84129a906ce61a673a4b641f9f4f97d80/app/src/main/res/drawable/5.jpeg" width="270" height="400"/>
+<img src= "https://github.com/sahil-mittal/Businessly/blob/85dcece84129a906ce61a673a4b641f9f4f97d80/app/src/main/res/drawable/6.PNG" width="270" height="400"/>
+<img src= "https://github.com/sahil-mittal/Businessly/blob/85dcece84129a906ce61a673a4b641f9f4f97d80/app/src/main/res/drawable/7.jpeg" width="270" height="400"/>
+<img src= "https://github.com/sahil-mittal/Businessly/blob/85dcece84129a906ce61a673a4b641f9f4f97d80/app/src/main/res/drawable/8.jpeg" width="270" height="400"/>
+<img src= "https://github.com/sahil-mittal/Businessly/blob/85dcece84129a906ce61a673a4b641f9f4f97d80/app/src/main/res/drawable/9.PNG" width="270" height="400"/>
+<img src= "https://github.com/sahil-mittal/Businessly/blob/85dcece84129a906ce61a673a4b641f9f4f97d80/app/src/main/res/drawable/10.jpeg" width="270" height="400"/>
+<img src= "https://github.com/sahil-mittal/Businessly/blob/85dcece84129a906ce61a673a4b641f9f4f97d80/app/src/main/res/drawable/11.jpeg" width="270" height="400"/>
+<img src= "https://github.com/sahil-mittal/Businessly/blob/85dcece84129a906ce61a673a4b641f9f4f97d80/app/src/main/res/drawable/12.PNG" width="270" height="400"/>
 
